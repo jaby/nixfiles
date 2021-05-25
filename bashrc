@@ -64,7 +64,7 @@ if ! shopt -oq posix; then
 fi
 
 # nix
-. /home/peter/.nix-profile/etc/profile.d/nix.sh
+. ~/.nix-profile/etc/profile.d/nix.sh
 
 # vim fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'

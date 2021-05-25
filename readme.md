@@ -9,17 +9,17 @@ Cfr also [Getting started with Home Manager for Nix](https://ghedam.at/24353/tut
 
     rm -rf /nix
     sudo rm -rf /nix
-    mkdir /nix
     sudo mkdir /nix
-    chown peter /nix 
-    sudo chown peter /nix
+    sudo mkdir /nix
+    sudo chown $USER /nix 
+    sudo chgrp $USER /nix
     sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
 
 ### git clone my nix files
 
     cd ~
-    git clone TODO/nixfiles 
+    git clone https://github.com/jaby/nixfiles.git
 
 
 ### Install home manager 
@@ -34,3 +34,6 @@ Cfr also [Getting started with Home Manager for Nix](https://ghedam.at/24353/tut
     mv nixpkgs /tmp            # ~/config/nixpkgs was created by the installation of home-manager 
     ln -s ~/nixfiles nixpkgs   # replace it with my cloned nixfiles
     home-manager switch        # switch to build the cloned configuration 
+
+    # you may need to move away your original .bashrc first
+    # mv ~/.bashrc /tmp
