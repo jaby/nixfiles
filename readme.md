@@ -2,7 +2,7 @@
 
 ## Initial setup
 
-Cfr also: ial-getting-started-with-home-manager-for-nix
+Cfr also [Getting started with Home Manager for Nix](https://ghedam.at/24353/tutorial-getting-started-with-home-manager-for-nix)
  
 
 ### Install nix for a single user 
