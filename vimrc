@@ -98,13 +98,23 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'LnL7/vim-nix'
+Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ziglang/zig.vim'
 call plug#end()
 
 map <leader>f :Files<CR>
+map <leader>fg :GFiles<CR>
+let g:fzf_preview_window = ''
+let g:fzf_layout = { 'window': {
+                \ 'width': 0.5,
+                \ 'height': 0.1,
+                \ 'highlight': 'Comment',
+                \ 'border': 'sharp' } }
 
 " turn relative line numbers on
 :set relativenumber
 :set rnu
+
+let g:fzf_layout = { 'down': '40%' }
